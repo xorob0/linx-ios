@@ -16,16 +16,16 @@ struct ContentView: View {
     @State private var document: FileDocument = OpenFile(input: "")
     @State private var links: [URL] = []
     
-
+    
     
     var body: some View {
-        let suite = UserDefaults(suiteName: "urlsuite")!
-
         
         let binding = Binding<String>(get: {
             self.url
         }, set: {
-            suite.set("\($0)/upload", forKey: "url")
+            if let suite = UserDefaults(suiteName: "group.xorob0.linxshare") {
+                suite.set("\($0)/upload", forKey: "url")
+            }
             self.url = $0
         })
         VStack(alignment: .leading) {
@@ -40,19 +40,20 @@ struct ContentView: View {
             
             ForEach(links, id: \.self) { link in
                 Link(link.absoluteString, destination: link)        }
-
+            
             
         }        .padding()
-            .fileImporter(
-                isPresented: $isImporting,
-                allowedContentTypes: [.image],
-                allowsMultipleSelection: true
-            ) { result in
-                do {
-                    let fileUrls = try result.get()
-                    
-                    for fileUrl in fileUrls {
-                        let data = try Data(contentsOf: fileUrl)
+        .fileImporter(
+            isPresented: $isImporting,
+            allowedContentTypes: [.image],
+            allowsMultipleSelection: true
+        ) { result in
+            do {
+                let fileUrls = try result.get()
+                
+                for fileUrl in fileUrls {
+                    let data = try Data(contentsOf: fileUrl)
+                    if let suite = UserDefaults(suiteName: "group.xorob0.linxshare") {
                         if let stringOne = suite.string(forKey: "url") {
                             AF.upload(data, to: "\(stringOne)/upload", method: .put).response { response in
                                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -61,17 +62,18 @@ struct ContentView: View {
                                 }
                             }
                         }
-
-                        
-                        
                     }
                     
-                } catch {
-                    // Handle failure.
-                    print("Unable to read file contents")
-                    print(error.localizedDescription)
+                    
+                    
                 }
+                
+            } catch {
+                // Handle failure.
+                print("Unable to read file contents")
+                print(error.localizedDescription)
             }
+        }
     }
 }
 
