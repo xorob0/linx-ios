@@ -1,0 +1,6 @@
+framework module Pods_LinxShare__iOS_ {
+  umbrella header "Pods-LinxShare (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}
