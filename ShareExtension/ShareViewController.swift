@@ -30,10 +30,12 @@ class ShareViewController: UIViewController {
                                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                                     let pasteboard = UIPasteboard.general
                                     pasteboard.string = utf8Text
+                                    extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
                                 }
                             }
                         }
                     }
+
                 } else {
                     // Handle this situation as you prefer
                     fatalError("Impossible to save image")
