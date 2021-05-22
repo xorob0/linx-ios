@@ -11,7 +11,8 @@ import Alamofire
 struct HTTPBinResponse: Decodable { let url: String }
 
 struct ContentView: View {
-    @State private var url: String = "https://linx.gneee.tech"
+    @State private var suite = UserDefaults(suiteName: "group.xorob0.linxshare")!
+    @State private var url: String =  UserDefaults(suiteName: "group.xorob0.linxshare")?.string(forKey: "url") ?? "https://linx.com"
     @State private var isImporting: Bool = false
     @State private var document: FileDocument = OpenFile(input: "")
     @State private var links: [URL] = []
@@ -23,9 +24,7 @@ struct ContentView: View {
         let binding = Binding<String>(get: {
             self.url
         }, set: {
-            if let suite = UserDefaults(suiteName: "group.xorob0.linxshare") {
-                suite.set("\($0)/upload", forKey: "url")
-            }
+            suite.set("\($0)/upload", forKey: "url")
             self.url = $0
         })
         VStack(alignment: .leading) {
@@ -53,14 +52,10 @@ struct ContentView: View {
                 
                 for fileUrl in fileUrls {
                     let data = try Data(contentsOf: fileUrl)
-                    if let suite = UserDefaults(suiteName: "group.xorob0.linxshare") {
-                        if let stringOne = suite.string(forKey: "url") {
-                            AF.upload(data, to: "\(stringOne)/upload", method: .put).response { response in
-                                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                                    links.append(URL(string: utf8Text.trimmingCharacters(in: CharacterSet.newlines))!)
-                                    debugPrint(utf8Text)
-                                }
-                            }
+                    AF.upload(data, to: "\(url)/upload", method: .put).response { response in
+                        if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                            links.append(URL(string: utf8Text.trimmingCharacters(in: CharacterSet.newlines))!)
+                            debugPrint(utf8Text)
                         }
                     }
                     
