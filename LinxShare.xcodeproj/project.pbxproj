@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E93EF8688B370BE7BF39A5C /* Pods_ShareExtension_MacOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D9F44EB3C77444EAA6BE59 /* Pods_ShareExtension_MacOS_.framework */; };
+		222BA8242659B71D00852406 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22B935D426594AD600040D00 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		222BA8332659B80C00852406 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 222BA8322659B80C00852406 /* icon.icns */; };
+		222BA8352659B80C00852406 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BA8342659B80C00852406 /* ShareViewController.swift */; };
+		222BA8382659B80C00852406 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222BA8362659B80C00852406 /* ShareViewController.xib */; };
+		222BA83D2659B80C00852406 /* ShareExtension(MacOS).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 222BA8302659B80C00852406 /* ShareExtension(MacOS).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		22884F582658FD19008005A4 /* LinxShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22884F452658FD17008005A4 /* LinxShareApp.swift */; };
 		22884F592658FD19008005A4 /* LinxShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22884F452658FD17008005A4 /* LinxShareApp.swift */; };
 		22884F5A2658FD19008005A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22884F462658FD17008005A4 /* ContentView.swift */; };
@@ -15,7 +21,6 @@
 		22884F5D2658FD19008005A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22884F472658FD19008005A4 /* Assets.xcassets */; };
 		22B935D726594AD600040D00 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B935D626594AD600040D00 /* ShareViewController.swift */; };
 		22B935DA26594AD600040D00 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B935D826594AD600040D00 /* MainInterface.storyboard */; };
-		22B935DE26594AD600040D00 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22B935D426594AD600040D00 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		22D6E26D26592E7600C59774 /* OpenFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6E26C26592E7600C59774 /* OpenFile.swift */; };
 		22D6E26E26592E7600C59774 /* OpenFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6E26C26592E7600C59774 /* OpenFile.swift */; };
 		22D6E2702659340A00C59774 /* SendFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6E26F2659340A00C59774 /* SendFile.swift */; };
@@ -26,23 +31,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		22B935DC26594AD600040D00 /* PBXContainerItemProxy */ = {
+		222BA8252659B71D00852406 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22884F402658FD17008005A4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 22B935D326594AD600040D00;
 			remoteInfo = ShareExtension;
 		};
+		222BA83B2659B80C00852406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22884F402658FD17008005A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 222BA82F2659B80C00852406;
+			remoteInfo = "ShareExtension(MacOS)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		22B935DF26594AD600040D00 /* Embed App Extensions */ = {
+		222BA8272659B71D00852406 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				22B935DE26594AD600040D00 /* ShareExtension.appex in Embed App Extensions */,
+				222BA8242659B71D00852406 /* ShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222BA82B2659B75E00852406 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				222BA83D2659B80C00852406 /* ShareExtension(MacOS).appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,6 +75,12 @@
 /* Begin PBXFileReference section */
 		13051A3181C97F2413505409 /* Pods_ShareExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		200322BABEE48D93E1A67A2A /* Pods_LinxShare__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinxShare__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		222BA8302659B80C00852406 /* ShareExtension(MacOS).appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShareExtension(MacOS).appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		222BA8322659B80C00852406 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		222BA8342659B80C00852406 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		222BA8372659B80C00852406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
+		222BA8392659B80C00852406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222BA83A2659B80C00852406 /* ShareExtension_MacOS_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension_MacOS_.entitlements; sourceTree = "<group>"; };
 		226552B326599C30009CB293 /* LinxShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LinxShare.entitlements; sourceTree = "<group>"; };
 		226552B426599C42009CB293 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		22884F452658FD17008005A4 /* LinxShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinxShareApp.swift; sourceTree = "<group>"; };
@@ -70,14 +99,25 @@
 		22D6E26F2659340A00C59774 /* SendFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFile.swift; sourceTree = "<group>"; };
 		290E84902F4A134A9C2C38B1 /* Pods-ShareExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension.release.xcconfig"; path = "Target Support Files/Pods-ShareExtension/Pods-ShareExtension.release.xcconfig"; sourceTree = "<group>"; };
 		40FC3487FF32DF295D6AF341 /* Pods-LinxShare (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinxShare (macOS).debug.xcconfig"; path = "Target Support Files/Pods-LinxShare (macOS)/Pods-LinxShare (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		6875CC0BC538831785149939 /* Pods-ShareExtension(MacOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension(MacOS).release.xcconfig"; path = "Target Support Files/Pods-ShareExtension(MacOS)/Pods-ShareExtension(MacOS).release.xcconfig"; sourceTree = "<group>"; };
 		82CF97951044710BAC74A13E /* Pods_LinxShare__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinxShare__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B2549C42ABE65C6F1DD5F3 /* Pods-ShareExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension.debug.xcconfig"; path = "Target Support Files/Pods-ShareExtension/Pods-ShareExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		873561617B9731A104C76755 /* Pods-LinxShare (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinxShare (iOS).release.xcconfig"; path = "Target Support Files/Pods-LinxShare (iOS)/Pods-LinxShare (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		BBC694776BEB7828DD4BFB5A /* Pods-ShareExtension(MacOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension(MacOS).debug.xcconfig"; path = "Target Support Files/Pods-ShareExtension(MacOS)/Pods-ShareExtension(MacOS).debug.xcconfig"; sourceTree = "<group>"; };
 		BDF72110EFD042411BA91131 /* Pods-LinxShare (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinxShare (iOS).debug.xcconfig"; path = "Target Support Files/Pods-LinxShare (iOS)/Pods-LinxShare (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		CEC531986196FC14CD36E4BC /* Pods-LinxShare (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinxShare (macOS).release.xcconfig"; path = "Target Support Files/Pods-LinxShare (macOS)/Pods-LinxShare (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		F0D9F44EB3C77444EAA6BE59 /* Pods_ShareExtension_MacOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareExtension_MacOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		222BA82D2659B80C00852406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E93EF8688B370BE7BF39A5C /* Pods_ShareExtension_MacOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22884F492658FD19008005A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,8 +154,22 @@
 				CEC531986196FC14CD36E4BC /* Pods-LinxShare (macOS).release.xcconfig */,
 				86B2549C42ABE65C6F1DD5F3 /* Pods-ShareExtension.debug.xcconfig */,
 				290E84902F4A134A9C2C38B1 /* Pods-ShareExtension.release.xcconfig */,
+				BBC694776BEB7828DD4BFB5A /* Pods-ShareExtension(MacOS).debug.xcconfig */,
+				6875CC0BC538831785149939 /* Pods-ShareExtension(MacOS).release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		222BA8312659B80C00852406 /* ShareExtension(MacOS) */ = {
+			isa = PBXGroup;
+			children = (
+				222BA8322659B80C00852406 /* icon.icns */,
+				222BA8342659B80C00852406 /* ShareViewController.swift */,
+				222BA8362659B80C00852406 /* ShareViewController.xib */,
+				222BA8392659B80C00852406 /* Info.plist */,
+				222BA83A2659B80C00852406 /* ShareExtension_MacOS_.entitlements */,
+			);
+			path = "ShareExtension(MacOS)";
 			sourceTree = "<group>";
 		};
 		22884F3F2658FD17008005A4 = {
@@ -126,6 +180,7 @@
 				22884F4E2658FD19008005A4 /* iOS */,
 				22884F552658FD19008005A4 /* macOS */,
 				22B935D526594AD600040D00 /* ShareExtension */,
+				222BA8312659B80C00852406 /* ShareExtension(MacOS) */,
 				22884F4D2658FD19008005A4 /* Products */,
 				204A116A4D582BF9F068855D /* Pods */,
 				2ABFBB7425971F9AE1244CB1 /* Frameworks */,
@@ -150,6 +205,7 @@
 				22884F4C2658FD19008005A4 /* LinxShare.app */,
 				22884F542658FD19008005A4 /* LinxShare.app */,
 				22B935D426594AD600040D00 /* ShareExtension.appex */,
+				222BA8302659B80C00852406 /* ShareExtension(MacOS).appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +244,7 @@
 				200322BABEE48D93E1A67A2A /* Pods_LinxShare__iOS_.framework */,
 				82CF97951044710BAC74A13E /* Pods_LinxShare__macOS_.framework */,
 				13051A3181C97F2413505409 /* Pods_ShareExtension.framework */,
+				F0D9F44EB3C77444EAA6BE59 /* Pods_ShareExtension_MacOS_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,6 +252,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		222BA82F2659B80C00852406 /* ShareExtension(MacOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222BA83E2659B80C00852406 /* Build configuration list for PBXNativeTarget "ShareExtension(MacOS)" */;
+			buildPhases = (
+				E4910B8EDEBAE2E57CD8BA37 /* [CP] Check Pods Manifest.lock */,
+				222BA82C2659B80C00852406 /* Sources */,
+				222BA82D2659B80C00852406 /* Frameworks */,
+				222BA82E2659B80C00852406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShareExtension(MacOS)";
+			productName = "ShareExtension(MacOS)";
+			productReference = 222BA8302659B80C00852406 /* ShareExtension(MacOS).appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		22884F4B2658FD19008005A4 /* LinxShare (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22884F602658FD19008005A4 /* Build configuration list for PBXNativeTarget "LinxShare (iOS)" */;
@@ -204,12 +279,12 @@
 				22884F492658FD19008005A4 /* Frameworks */,
 				22884F4A2658FD19008005A4 /* Resources */,
 				0506CAEE38F5D61A71EA64AD /* [CP] Embed Pods Frameworks */,
-				22B935DF26594AD600040D00 /* Embed App Extensions */,
+				222BA8272659B71D00852406 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				22B935DD26594AD600040D00 /* PBXTargetDependency */,
+				222BA8262659B71D00852406 /* PBXTargetDependency */,
 			);
 			name = "LinxShare (iOS)";
 			productName = "LinxShare (iOS)";
@@ -225,10 +300,12 @@
 				22884F512658FD19008005A4 /* Frameworks */,
 				22884F522658FD19008005A4 /* Resources */,
 				51EC3B1721A865FF6594BF92 /* [CP] Embed Pods Frameworks */,
+				222BA82B2659B75E00852406 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				222BA83C2659B80C00852406 /* PBXTargetDependency */,
 			);
 			name = "LinxShare (macOS)";
 			productName = "LinxShare (macOS)";
@@ -262,6 +339,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					222BA82F2659B80C00852406 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					22884F4B2658FD19008005A4 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -289,11 +369,21 @@
 				22884F4B2658FD19008005A4 /* LinxShare (iOS) */,
 				22884F532658FD19008005A4 /* LinxShare (macOS) */,
 				22B935D326594AD600040D00 /* ShareExtension */,
+				222BA82F2659B80C00852406 /* ShareExtension(MacOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		222BA82E2659B80C00852406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222BA8382659B80C00852406 /* ShareViewController.xib in Resources */,
+				222BA8332659B80C00852406 /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22884F4A2658FD19008005A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,9 +511,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E4910B8EDEBAE2E57CD8BA37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareExtension(MacOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		222BA82C2659B80C00852406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222BA8352659B80C00852406 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22884F482658FD19008005A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,14 +577,27 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22B935DD26594AD600040D00 /* PBXTargetDependency */ = {
+		222BA8262659B71D00852406 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 22B935D326594AD600040D00 /* ShareExtension */;
-			targetProxy = 22B935DC26594AD600040D00 /* PBXContainerItemProxy */;
+			targetProxy = 222BA8252659B71D00852406 /* PBXContainerItemProxy */;
+		};
+		222BA83C2659B80C00852406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 222BA82F2659B80C00852406 /* ShareExtension(MacOS) */;
+			targetProxy = 222BA83B2659B80C00852406 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		222BA8362659B80C00852406 /* ShareViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				222BA8372659B80C00852406 /* Base */,
+			);
+			name = ShareViewController.xib;
+			sourceTree = "<group>";
+		};
 		22B935D826594AD600040D00 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -476,6 +609,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		222BA83F2659B80C00852406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBC694776BEB7828DD4BFB5A /* Pods-ShareExtension(MacOS).debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ShareExtension(MacOS)/ShareExtension_MacOS_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HWWMSWUK72;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "ShareExtension(MacOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "xorob0.LinxShare.ShareExtension-MacOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		222BA8402659B80C00852406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6875CC0BC538831785149939 /* Pods-ShareExtension(MacOS).release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ShareExtension(MacOS)/ShareExtension_MacOS_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HWWMSWUK72;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "ShareExtension(MacOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "xorob0.LinxShare.ShareExtension-MacOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		22884F5E2658FD19008005A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -591,7 +774,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BDF72110EFD042411BA91131 /* Pods-LinxShare (iOS).debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LinxShare.entitlements;
@@ -616,7 +798,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 873561617B9731A104C76755 /* Pods-LinxShare (iOS).release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LinxShare.entitlements;
@@ -642,9 +823,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40FC3487FF32DF295D6AF341 /* Pods-LinxShare (macOS).debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HWWMSWUK72;
@@ -667,9 +850,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CEC531986196FC14CD36E4BC /* Pods-LinxShare (macOS).release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HWWMSWUK72;
@@ -706,8 +891,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -729,8 +915,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -738,6 +925,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		222BA83E2659B80C00852406 /* Build configuration list for PBXNativeTarget "ShareExtension(MacOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222BA83F2659B80C00852406 /* Debug */,
+				222BA8402659B80C00852406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		22884F432658FD17008005A4 /* Build configuration list for PBXProject "LinxShare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
