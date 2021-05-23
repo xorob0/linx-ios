@@ -14,34 +14,39 @@ struct ContentView: View {
     @State private var suite = UserDefaults(suiteName: "group.xorob0.linxshare")!
     @State private var url: String =  UserDefaults(suiteName: "group.xorob0.linxshare")?.string(forKey: "url") ?? "https://linx.com"
     @State private var isImporting: Bool = false
-    @State private var document: FileDocument = OpenFile(input: "")
     @State private var links: [URL] = []
-    
-    
     
     var body: some View {
         
         let binding = Binding<String>(get: {
             self.url
         }, set: {
-            suite.set("\($0)/upload", forKey: "url")
+            suite.set($0, forKey: "url")
             self.url = $0
         })
+        
         VStack(alignment: .leading) {
             TextField("Enter Linx URL", text: binding)
+                .disableAutocorrection(true)
             Button(action: {
                 isImporting = true
             }) {
                 Image(systemName: "square.and.arrow.down")
-                    .font(.largeTitle)
-                    .foregroundColor(.red)
+                    .resizable()
+                    .aspectRatio(contentMode:.fit)
+                    .clipped()
             }
-            
+            .padding(.horizontal, 50)
+            .padding(.top, 50)
+
             ForEach(links, id: \.self) { link in
                 Link(link.absoluteString, destination: link)        }
             
             
-        }        .padding()
+        }
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+        .autocapitalization(.none)
+        .padding(.all, 10)
         .fileImporter(
             isPresented: $isImporting,
             allowedContentTypes: [.image],
