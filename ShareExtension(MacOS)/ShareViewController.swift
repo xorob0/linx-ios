@@ -17,18 +17,10 @@ class ShareViewController: NSViewController {
     
     override func loadView() {
         super.loadView()
-        
-        // Insert code here to customize the view
-        let item = self.extensionContext!.inputItems[0] as! NSExtensionItem
-        if let attachments = item.attachments {
-            NSLog("Attachments = %@", attachments as NSArray)
-        } else {
-            NSLog("No Attachments")
-        }
+        send()
     }
     
-    @IBAction func send(_ sender: AnyObject?) {
-        // Complete implementation by setting the appropriate value on the output item
+    func send() {
         let attachments = (self.extensionContext?.inputItems.first as? NSExtensionItem)?.attachments ?? []
         let contentType = kUTTypeData as String
         for provider in attachments {
@@ -52,6 +44,7 @@ class ShareViewController: NSViewController {
                         let pasteboard = NSPasteboard.general
                         pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
                         pasteboard.setString(utf8Text, forType: NSPasteboard.PasteboardType.string);
+                        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
                     }
                 }
             }
