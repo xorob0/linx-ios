@@ -13,6 +13,10 @@
 		222BA8352659B80C00852406 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BA8342659B80C00852406 /* ShareViewController.swift */; };
 		222BA8382659B80C00852406 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222BA8362659B80C00852406 /* ShareViewController.xib */; };
 		222BA83D2659B80C00852406 /* ShareExtension(MacOS).appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 222BA8302659B80C00852406 /* ShareExtension(MacOS).appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		222BA842265A5E6300852406 /* HandleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BA841265A5E6300852406 /* HandleFile.swift */; };
+		222BA843265A5E6300852406 /* HandleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BA841265A5E6300852406 /* HandleFile.swift */; };
+		222BA844265A5E6300852406 /* HandleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BA841265A5E6300852406 /* HandleFile.swift */; };
+		222BA845265A5E6300852406 /* HandleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BA841265A5E6300852406 /* HandleFile.swift */; };
 		22884F582658FD19008005A4 /* LinxShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22884F452658FD17008005A4 /* LinxShareApp.swift */; };
 		22884F592658FD19008005A4 /* LinxShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22884F452658FD17008005A4 /* LinxShareApp.swift */; };
 		22884F5A2658FD19008005A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22884F462658FD17008005A4 /* ContentView.swift */; };
@@ -81,6 +85,7 @@
 		222BA8372659B80C00852406 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
 		222BA8392659B80C00852406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222BA83A2659B80C00852406 /* ShareExtension_MacOS_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension_MacOS_.entitlements; sourceTree = "<group>"; };
+		222BA841265A5E6300852406 /* HandleFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleFile.swift; sourceTree = "<group>"; };
 		226552B326599C30009CB293 /* LinxShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LinxShare.entitlements; sourceTree = "<group>"; };
 		226552B426599C42009CB293 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		22884F452658FD17008005A4 /* LinxShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinxShareApp.swift; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 				22884F472658FD19008005A4 /* Assets.xcassets */,
 				22D6E26C26592E7600C59774 /* OpenFile.swift */,
 				22D6E26F2659340A00C59774 /* SendFile.swift */,
+				222BA841265A5E6300852406 /* HandleFile.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222BA8352659B80C00852406 /* ShareViewController.swift in Sources */,
+				222BA845265A5E6300852406 /* HandleFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22884F5A2658FD19008005A4 /* ContentView.swift in Sources */,
+				222BA842265A5E6300852406 /* HandleFile.swift in Sources */,
 				22D6E26D26592E7600C59774 /* OpenFile.swift in Sources */,
 				22884F582658FD19008005A4 /* LinxShareApp.swift in Sources */,
 				22D6E2702659340A00C59774 /* SendFile.swift in Sources */,
@@ -560,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22884F5B2658FD19008005A4 /* ContentView.swift in Sources */,
+				222BA843265A5E6300852406 /* HandleFile.swift in Sources */,
 				22D6E26E26592E7600C59774 /* OpenFile.swift in Sources */,
 				22884F592658FD19008005A4 /* LinxShareApp.swift in Sources */,
 				22D6E2712659340A00C59774 /* SendFile.swift in Sources */,
@@ -571,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B935D726594AD600040D00 /* ShareViewController.swift in Sources */,
+				222BA844265A5E6300852406 /* HandleFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,12 @@ class ShareViewController: NSViewController {
         for provider in attachments {
             provider.loadItem(forTypeIdentifier: contentType,
                               options: nil) { [unowned self] (data, error) in
-                    handleSharedFile(data: data as! Data)
+                handleFile(data: data as! Data, handleLink: {url in
+                    let pasteboard = NSPasteboard.general
+                    pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
+                    pasteboard.setString(url.absoluteString, forType: NSPasteboard.PasteboardType.string);
+                    self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
+                })
             }
         }
     }
@@ -34,20 +39,5 @@ class ShareViewController: NSViewController {
     @IBAction func cancel(_ sender: AnyObject?) {
         let cancelError = NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil)
         self.extensionContext!.cancelRequest(withError: cancelError)
-    }
-    
-    private func handleSharedFile(data : Data) {
-        if let suite = UserDefaults(suiteName: "group.xorob0.linxshare") {
-            if let url = suite.string(forKey: "url") {
-                AF.upload(data, to: "\(url)/upload", method: .put).response { response in
-                    if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                        let pasteboard = NSPasteboard.general
-                        pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil)
-                        pasteboard.setString(utf8Text, forType: NSPasteboard.PasteboardType.string);
-                        self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-                    }
-                }
-            }
-        }
     }
 }

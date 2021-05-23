@@ -52,19 +52,12 @@ struct ContentView: View {
                 
                 for fileUrl in fileUrls {
                     let data = try Data(contentsOf: fileUrl)
-                    AF.upload(data, to: "\(url)/upload", method: .put).response { response in
-                        if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                            links.append(URL(string: utf8Text.trimmingCharacters(in: CharacterSet.newlines))!)
-                            debugPrint(utf8Text)
-                        }
-                    }
-                    
-                    
-                    
+                    handleFile(data: data, handleLink: {url in
+                        links.append(url)
+                    })
                 }
                 
             } catch {
-                // Handle failure.
                 print("Unable to read file contents")
                 print(error.localizedDescription)
             }
